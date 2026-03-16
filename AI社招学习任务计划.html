@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI社招学习任务计划</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        .task-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .task-item.completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .stage {
+            margin-bottom: 30px;
+        }
+        .priority {
+            margin-left: auto;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .high {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .medium {
+            background-color: #ffd93d;
+            color: #333;
+        }
+        .low {
+            background-color: #6bcb77;
+            color: white;
+        }
+        .summary {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+        .summary h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>从零到大厂AI社招开发岗：80%入职标准学习规划（2026马年版）</h1>
+        
+        <div class="summary">
+            <h3>核心目标</h3>
+            <p>4-6个月系统攻坚（社招更看重"即插即用"能力），覆盖大厂AI社招开发岗80%核心要求（工程落地、业务适配、问题排查、面试竞争力），每个阶段配自测环节检验成果，避免"纸上谈兵"，确保达标后可直接对接社招需求。</p>
+        </div>
+
+        <!-- 第一阶段 -->
+        <div class="stage">
+            <h2>第一阶段：社招AI基础速成（1个月）</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1">Python核心学习（2周）- 聚焦AI开发常用语法，学习NumPy、Pandas、Matplotlib</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-2">
+                    <label for="task-2">数学与AI概念学习（1.5周）- 线性代数、概率论、微积分基础，AI基本概念</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-3">
+                    <label for="task-3">工具入门（0.5周）- Git基础、PyTorch快速入门</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-4">
+                    <label for="task-4">自测环节 - 编程测试（50分）、基础测试（30分）、工具测试（20分），≥70分合格</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 第二阶段 -->
+        <div class="stage">
+            <h2>第二阶段：机器学习实战（1.5个月）</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox" id="task-5">
+                    <label for="task-5">社招高频算法学习（3周）- 逻辑回归、XGBoost/LightGBM、随机森林、K-Means、PCA</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-6">
+                    <label for="task-6">模型评估与调优学习（1.5周）- 评估指标、调参方法、过拟合/欠拟合解决</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-7">
+                    <label for="task-7">社招级实战项目（1.5周）- 电商用户流失预测、房价预测</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-8">
+                    <label for="task-8">自测环节 - 算法实战（50分）、调优测试（30分）、简历适配测试（20分），≥75分合格</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 第三阶段 -->
+        <div class="stage">
+            <h2>第三阶段：深度学习与工程落地（1.5个月）</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox" id="task-9">
+                    <label for="task-9">PyTorch实战学习（2周）- Dataset/DataLoader、模型定义、训练流程、模型保存与加载</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-10">
+                    <label for="task-10">模型部署学习（3周）- ONNX Runtime、模型量化、FastAPI、Docker容器化</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-11">
+                    <label for="task-11">问题排查学习（1周）- 训练问题、部署问题的排查与解决</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-12">
+                    <label for="task-12">自测环节 - 深度学习实战（30分）、部署实战（40分）、问题排查测试（30分），≥80分合格</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 第四阶段 -->
+        <div class="stage">
+            <h2>第四阶段：社招专项突破（1个月）</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox" id="task-13">
+                    <label for="task-13">大厂社招业务场景适配学习（2周）- 推荐系统、计算机视觉、大模型应用</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-14">
+                    <label for="task-14">社招面试专项学习（1周）- LeetCode算法题、高频面试题</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-15">
+                    <label for="task-15">简历与面试模拟学习（1周）- 简历优化、面试模拟</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-16">
+                    <label for="task-16">自测环节 - 业务实战测试（30分）、面试模拟测试（40分）、简历测试（30分），≥85分合格</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 最终达标 -->
+        <div class="stage">
+            <h2>最终达标：80%大厂AI社招入职能力验证（1周）</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox" id="task-17">
+                    <label for="task-17">社招AI开发模拟项目全流程 - 需求分析、数据处理、模型训练与调优、工程部署、项目文档</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" id="task-18">
+                    <label for="task-18">对照大厂AI社招JD，核对能力覆盖度（≥80%）</label>
+                    <span class="priority high">高优先级</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="summary">
+            <h3>社招补充建议</h3>
+            <ul>
+                <li>开源项目：在GitHub提交1个完整的AI部署项目，增加简历亮点</li>
+                <li>内推优先：大厂AI社招内推可跳过简历筛选，优先联系大厂在职员工内推</li>
+                <li>面试复盘：每次模拟面试后复盘，重点记录"回答不流畅、不会的问题"</li>
+                <li>持续跟进：关注大厂AI技术动态，面试时可体现自己的学习能力</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 添加勾选功能
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const taskItem = this.closest('.task-item');
+                if (this.checked) {
+                    taskItem.classList.add('completed');
+                } else {
+                    taskItem.classList.remove('completed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
