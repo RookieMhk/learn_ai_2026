@@ -10,7 +10,7 @@
 
 **定义**：正确预测的数量占总预测数量的比例。
 
-$$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$$
+$$Accuracy = (TP + TN)/(TP + TN + FP + FN)$$
 
 ```python
 from sklearn.metrics import accuracy_score
@@ -72,7 +72,7 @@ plt.show()
 
 **定义**：预测为正类中，真正为正的比例
 
-$$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{\text{TP}}{\text{所有预测为正的}}$$
+$$Precision = TP/(TP + FP) = TP/所有预测为正的$$
 
 ```python
 from sklearn.metrics import precision_score
@@ -91,7 +91,7 @@ print(f"精确率: {precision:.2f}")  # 0.80
 
 **定义**：实际正类中，被正确预测的比例
 
-$$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{\text{TP}}{\text{所有实际为正的}}$$
+$$Recall = TP/(TP + FN) = TP/所有实际为正的$$
 
 ```python
 from sklearn.metrics import recall_score
@@ -110,7 +110,7 @@ print(f"召回率: {recall:.2f}")  # 0.75
 
 **定义**：精确率和召回率的调和平均
 
-$$\text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
+$$F1 = 2 × Precision × Recall/(Precision + Recall)$$
 
 ```python
 from sklearn.metrics import f1_score
@@ -243,9 +243,9 @@ print(f"P: {p:.2f}, R: {r:.2f}, F1: {f:.2f}")  # P: 0.50, R: 0.50, F1: 0.50
 
 **定义**：衡量生成文本与参考文本的n-gram重叠程度
 
-$$\text{BLEU} = \text{BP} \times \exp\left(\sum_{n=1}^{N} w_n \log p_n\right)$$
+$$BLEU = BP × ≤ft(Σ_ₙ₌₁N wₙ pₙ)$$
 
-其中BP是简短惩罚，$p_n$是n-gram精确率
+其中BP是简短惩罚，$pₙ$是n-gram精确率
 
 ```python
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
@@ -326,7 +326,7 @@ print(f"METEOR: {meteor:.4f}")
 
 **定义**：衡量语言模型对文本的预测能力
 
-$$\text{PPL} = \exp\left(-\frac{1}{N}\sum_{i=1}^{N}\log P(w_i|w_{1:i-1})\right)$$
+$$PPL = ≤ft(-1/NΣ_ᵢ₌₁NP(wᵢ|w_₁:ᵢ₋₁))$$
 
 ```python
 import math

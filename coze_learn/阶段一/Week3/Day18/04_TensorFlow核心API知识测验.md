@@ -95,8 +95,8 @@ D. 使用`tape.watch()`可以停止对某个Tensor的梯度追踪
 ---
 
 ### 4. 编程题：多变量函数求导
-给定函数：$f(x, y) = x^3 + 2xy + y^2$
-补全代码计算在点`(2, 3)`处的梯度（$\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$）。
+给定函数：$f(x, y) = x³ + 2xy + y²$
+补全代码计算在点`(2, 3)`处的梯度（$(∂ f)/(∂ x)$, $(∂ f)/(∂ y)$）。
 
 ```python
 import tensorflow as tf

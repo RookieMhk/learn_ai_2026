@@ -6,9 +6,7 @@
 
 卷积是CNN的基础操作，其数学定义为：
 
-$$
-(f * g)(x, y) = \sum_{i=-\infty}^{\infty} \sum_{j=-\infty}^{\infty} f(i, j) \cdot g(x-i, y-j)
-$$
+$$(f * g)(x, y) = Σ_ᵢ₌₋ᵢₙfₜyⁱⁿᶠᵗʸ Σ_ⱼ₌₋ᵢₙfₜyⁱⁿᶠᵗʸ f(i, j) · g(x-i, y-j)$$
 
 在图像处理中，我们使用离散卷积，其中$f$是输入图像，$g$是卷积核（滤波器）。实际操作是卷积核在输入图像上滑动，计算对应位置的加权和。
 
@@ -18,12 +16,8 @@ $$
 - **填充（Padding）**：在图像边缘添加的像素，控制输出尺寸
 
 **输出尺寸计算公式**：
-$$
-H_{out} = \left\lfloor \frac{H_{in} + 2 \times padding - kernel\_size}{stride} \right\rfloor + 1
-$$
-$$
-W_{out} = \left\lfloor \frac{W_{in} + 2 \times padding - kernel\_size}{stride} \right\rfloor + 1
-$$
+$$H_ₒᵤₜ = ≤ft(H_ᵢₙ + 2 × padding - kernelₛize)/stride + 1$$
+$$W_ₒᵤₜ = ≤ft(W_ᵢₙ + 2 × padding - kernelₛize)/stride + 1$$
 
 ### 1.2 代码实现：手动实现二维卷积
 
@@ -132,21 +126,15 @@ plt.show()
 
 **常用激活函数**：
 1. **ReLU（Rectified Linear Unit）**：
-   $$
-   f(x) = \max(0, x)
-   $$
+   $$f(x) = max(0, x)$$
    优点：计算简单，缓解梯度消失
 
 2. **Sigmoid**：
-   $$
-   f(x) = \frac{1}{1 + e^{-x}}
-   $$
+   $$f(x) = 1/(1 + e⁻ˣ)$$
    缺点：梯度饱和，计算复杂
 
 3. **Tanh**：
-   $$
-   f(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
-   $$
+   $$f(x) = (eˣ - e⁻ˣ)/(eˣ + e⁻ˣ)$$
    输出范围[-1, 1]，中心对称
 
 ### 2.2 池化层（Pooling）
@@ -192,12 +180,8 @@ print(output_avg)
 2. 引入可学习的缩放和平移参数
 
 **数学公式**：
-$$
-\hat{x} = \frac{x - \mu_B}{\sqrt{\sigma_B^2 + \epsilon}}
-$$
-$$
-y = \gamma \hat{x} + \beta
-$$
+$${x} = (x - μB)/(√σB² + ε)$$
+$$y = γ {x} + β$$
 
 ## 三、经典CNN架构解析
 
@@ -398,9 +382,7 @@ print(f"输出尺寸: {output.shape}")
 **核心创新**：残差连接（Residual Connection），解决深层网络梯度消失问题。
 
 **残差块公式**：
-$$
-y = F(x, W_i) + x
-$$
+$$y = F(x, Wᵢ) + x$$
 
 ```python
 class BasicBlock(nn.Module):
@@ -720,24 +702,16 @@ trained_model, history = train_model(model, train_loader, test_loader, epochs=5,
 图像分类任务常用评估指标：
 
 1. **准确率（Accuracy）**：
-   $$
-   Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
-   $$
+   $$Accuracy = (TP + TN)/(TP + TN + FP + FN)$$
 
 2. **精确率（Precision）**：
-   $$
-   Precision = \frac{TP}{TP + FP}
-   $$
+   $$Precision = TP/(TP + FP)$$
 
 3. **召回率（Recall）**：
-   $$
-   Recall = \frac{TP}{TP + FN}
-   $$
+   $$Recall = TP/(TP + FN)$$
 
 4. **F1分数**：
-   $$
-   F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}
-   $$
+   $$F1 = 2 × (Precision × Recall)/(Precision + Recall)$$
 
 5. **混淆矩阵（Confusion Matrix）**：展示每个类别的分类情况
 
